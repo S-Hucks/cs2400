@@ -55,3 +55,16 @@ double Rectangle::area(){
     return length * width;
 }
 
+bool operator ==(Rectangle r1, Rectangle r2){
+    if (r1.length == r2.length &&
+        r1.width == r2.width)
+    {
+       return true;
+    }
+    return false;
+}
+
+ostream & operator <<(ostream &outs, const Rectangle &r){
+    outs << "(" << r.length << "x" << r.width << ")" << endl;
+    return outs;
+}

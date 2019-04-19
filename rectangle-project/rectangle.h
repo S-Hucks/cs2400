@@ -23,7 +23,8 @@ public:
     //helper
     void output();
     double area();
-
+    friend bool operator ==(Rectangle r1, Rectangle r2);
+    friend ostream & operator <<(ostream &outs, const Rectangle &r);
 
 
 
